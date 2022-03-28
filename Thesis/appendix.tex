@@ -1,0 +1,24 @@
+\chapter{比較手法のパラメータ設定}
+比較手法で用いたハイパーパラメータについて述べる。比較手法の精度は\cite{taguchi2021graph}の値を用いた。詳細なハイパーパラメータとしては以下の通り設定した。
+\begin{itemize}
+    \item \textsc{MEAN} \cite{GarciaLaencina2010}: \\
+        デフォルトのモデルを用いている。
+    \item \textsc{K-NN} \cite{batista2002study}:\\
+        ノードごとに考慮する近傍ノード数は$k=5$である。
+    \item \textsc{MFT} \cite{koren2009mf}:\\
+       行列変換で用いる隠れ層のランク数は10である。
+    \item \textsc{SoftImp} \cite{mazumder2010soft}:\\
+        デフォルトのモデルを用いている。
+    \item \textsc{MICE} \cite{buuren2010mice}:\\
+        デフォルトのモデルを用いている。
+    \item \textsc{MissForest} \cite{Stekhoven2011missforest}:\\
+        デフォルトのモデルを用いている。
+    \item \textsc{VAE} \cite{kingma2013auto}:\\
+        エンコーダ,デコーダ共に2層パーセプトロンを用いており、隠れ層の次元数が32、潜在表現の次元数が16、ドロップアウト率が0.1である。
+    \item \textsc{GAIN} \cite{yoon2018gain}:\\
+        ヒント率が0.9であり、損失関数でのトレードオフパラメータは$\alpha=10$である。
+    \item \textsc{GINN} \cite{spinelli2019ginn}:\\
+        デフォルトのモデルを用いている。
+    \item \textsc{GCNmf} \cite{taguchi2021graph}:\\
+       GMMの正規分布数は$K=5$である。
+\end{itemize}

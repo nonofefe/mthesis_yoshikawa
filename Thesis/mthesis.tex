@@ -1,0 +1,117 @@
+\documentclass[a4paper,11pt,oneside,openany,report]{jsbook}
+
+\usepackage[left=30mm,right=30mm,top=25mm,bottom=25mm]{geometry}
+\usepackage{cscover}
+\usepackage[dvipdfmx]{graphicx}
+\usepackage[dvipdfmx]{color}
+\usepackage[nobreak]{cite}
+\usepackage[a4paper,dvipdfmx,pdfdisplaydoctitle=true,%
+  bookmarks=true,bookmarksnumbered=true,bookmarkstype=toc,bookmarksopen=true,%
+    pdftitle={グラフ構造を用いて欠損値埋めを行うネットワークの半教師あり学習},%
+    pdfauthor={吉川純平}%
+    ]{hyperref}
+\usepackage{pxjahyper}
+
+
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{bm}
+\usepackage{booktabs}
+\usepackage{mathtools}
+\usepackage{multirow}
+\usepackage{subfigure}
+
+\renewcommand{\bibname}{参考文献}
+\setcounter{tocdepth}{2}
+\pagestyle{plain}
+
+\newcommand{\TODO}[1]{\textbf{[TODO: #1]}}
+%\renewcommand{\TODO}[1]{}
+
+
+\def \model{\textsc{GCNmf}}
+\newcommand{\red}[1]{\textcolor{red}{#1}}
+\newcommand{\midheader}[2]{%
+        \midrule\topmidheader{#1}{#2}}
+\newcommand\topmidheader[2]{\multicolumn{#1}{c}{#2}\\%
+                \addlinespace[0.5ex]}
+\newcommand{\diag}{\mathrm{diag}}
+\newcommand{\softmax}{\mathrm{softmax}}
+\newcommand{\relu}{\mathrm{ReLU}}
+\newcommand{\sigmoid}{\mathrm{sigmoid}}
+
+
+
+
+
+
+\thesistype{修士論文}
+\title{グラフ構造を用いて欠損値埋めを行う\\ネットワークの半教師あり学習}
+\author{吉川 純平}
+\studentid{20M31190}
+\affiliation{%
+  東京工業大学\\
+  情報理工学院\\
+  知能情報コース
+}
+\date{2020年1月}
+
+\supervisorname{指導教員}
+\supervisor{村田 剛志}
+%\dsupervisorname{副指導教員}
+%\dsupervisor{工学 次郎}
+
+\begin{document}
+
+\frontmatter
+\maketitle
+
+\input{abstract}
+
+
+\tableofcontents
+\listoffigures
+\listoftables
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\mainmatter
+
+\input{introduction}
+
+\input{related}
+
+\input{approach}
+
+
+\input{experiment}
+
+
+\input{conclusion}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\appendix
+\input{appendix}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\backmatter
+\input{acknowledgment}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\bibliographystyle{jplain}
+\bibliography{references}
+%\begin{thebibliography}{99}
+%  \bibitem{tokodai-xyz2015} 東工大太郎. 良い論文の書き方. \textit{Journal of XYZ}, Vol.~3, No.~4, pp. 15--34, 2015.
+%\end{thebibliography}
+
+\end{document}

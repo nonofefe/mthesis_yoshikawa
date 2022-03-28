@@ -1,0 +1,5 @@
+type = uniform
+0
+type = uniform
+0
+0.7275 ± 0.0045
